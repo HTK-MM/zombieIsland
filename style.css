@@ -1,0 +1,315 @@
+@font-face {
+    font-family: 'Creepster-Regular';
+    src: url('./fonts/creepster-Regular.ttf')format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Creepster-Regular', Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("./img/background-body.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.9;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 30px;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.icon-overlay {
+    width: 50px;
+    height: 80px;
+    animation: rotate 0.9s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(-30deg);
+    }
+
+    50% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(30deg)
+    }
+}
+
+.div-startscreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100vw;   
+    max-width: 1200px;
+    text-align: center;
+}
+
+.screen-size {
+    display: flex;
+    width: 100%;
+}
+
+.btns-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    top: 50px;
+    justify-content: center;
+    gap: 30px;
+    position: absolute;
+}
+
+.btns-start {
+    display: flex;
+    width: auto;
+    height: 50px;
+    border-radius: 10px;
+    border: #56b409 solid 2px;
+    color: #084717;
+    background-color: #9ef756;
+    cursor: pointer;
+    font-family: 'Creepster-Regular';
+    font-size: x-large;
+    box-shadow: 2px 3px 5px rgba(35, 0, 0, 2);
+    align-items: center;
+    padding: 5px;
+}
+
+.btns-start:hover {
+    scale: 1.2;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    bottom: 10px;
+    right: 60px;
+    position: absolute;
+}
+
+.a-link {
+    display: flex;
+    font-family: 'Creepster-Regular';
+    font-size: large;
+    cursor: pointer;
+    text-decoration: none;
+    color: #092379;
+    margin-top: 20px;
+}
+
+.a-link:hover {
+    scale: 1.2;
+}
+
+.gameTitle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 86px;
+    color: #009622;
+    letter-spacing: 3px;
+    text-shadow: 6px 8px 9px rgba(130, 0, 0, 2);
+}
+
+.fullscreen {
+    position: relative;
+    width: 720px;
+    height: 480px;
+}
+
+#canvas {   
+    background-color: black;  
+    width: 100%;
+    height: 100%;
+}
+
+.sound-screen-controls {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    gap: 10px;
+}
+
+.mobile-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    align-items: start;
+    bottom: 10px;
+    left: 20px;
+    right: 20px;
+}
+
+.btn-control {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(243, 231, 231);
+    border: rgb(209, 199, 199) solid 1p;
+    cursor: pointer;
+    opacity: 0.8;
+    margin: 0 10px 0 10px;
+}
+
+.dialogo-bg {
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dialog {
+    width: 500px;
+    background: rgb(116, 226, 208);
+    border: 1px solid rgb(22, 59, 63);
+    opacity: 0.9;
+    border-radius: 10px;
+    padding: 24px;
+    color: rgba(20, 18, 18, 0.856);
+}
+
+.close {
+    display: flex;
+    font-size: 25px;
+    justify-content: end;
+    font-weight: bold;
+}
+
+.close:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.dialog-title {
+    display: flex;
+    font-size: 30px;
+    color: #009622;
+    letter-spacing: 2px;
+    text-shadow: 2px 3px 4px rgba(130, 0, 0, 2);
+    margin-top: 10px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.move-description {
+    display: flex;
+    flex-direction: row;
+}
+
+.icon-line {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    font-size: 24px;
+    justify-content: space-around;
+    gap: 30px;
+    margin-left: 30px;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+.d-none {
+    display: none;
+}
+
+@media only screen and (max-width: 850px) {
+    .div-startscreen {
+        background-size: contain;
+        height: auto;
+    }
+
+    .startscreen-size {
+        height: auto;
+    }
+
+    .btns-start {
+        height: 95%;
+    }
+
+    .links-container {
+        bottom: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .startscreen-size {
+        width: 100%;
+    }
+
+    .btns-start {
+        font-size: 80%;
+    }
+
+    .a-link {
+        font-size: 70%;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    #canvas {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    #canvas {
+        width: 100%;
+    }
+
+    .gameTitle {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 520px) {
+    .startscreen-size {
+        width: 100%;
+    }
+}
+
+/*Smartphones*/
+@media only screen and (max-height: 480px) {
+    #canvas {
+        height: 100vh;
+    }
+
+    .gameTitle {
+        display: none;
+    }
+}

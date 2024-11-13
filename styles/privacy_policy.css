@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Creepster-Regular';
+    src: url('../fonts/creepster-Regular.ttf')format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Creepster-Regular', Arial, Helvetica, sans-serif;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../img/background_legal.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.privacy-policy {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #17361c;
+    letter-spacing: 1px;
+    padding: 50px 40px 20px 40px;
+}
+
+.title-policy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    width: 100%
+  }
+
+h1 {
+    display: flex;
+    font-size: 46px;
+    color: #acd1b2;
+    border-color: #17361c;
+    margin-bottom: 30px;
+    text-shadow: 4px 2px 4px rgba(130, 0, 0, 2);
+}
+
+h2 {
+    color: #111f13;   
+    display: flex;
+}
+
+h3 {
+    color: #111f13;
+    text-decoration: underline;
+    display: flex;
+}
+
+h4 {
+    color: #111f13;
+    text-decoration: underline;
+    display: flex;
+}
+
+p {
+
+    display: flex;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #092379;
+}
+
+a:hover {
+    scale: 1.2;
+}
+@media(max-width:750px){
+    .privacy-policy{
+        padding: 30px 15px 15px 15px;
+    }
+    .title-policy{
+        gap:30px;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: start;
+    }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Island</title>
+    <link rel="shortcut icon" href="./img/2_enemies_zombie/zombie2/1_walk/Walk3.png">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="classes/drawable-object.class.js"></script>
+    <script src="classes/movable-object.class.js"></script>
+    <script src="classes/character.class.js"></script>
+    <script src="classes/zombie.class.js"></script>
+    <script src="classes/zombie2.class.js"></script>
+    <script src="classes/cloud.class.js"></script>
+    <script src="classes/status_healths.class.js"></script>
+    <script src="classes/status_coins.class.js"></script>
+    <script src="classes/status_bottles.class.js"></script>
+    <script src="classes/status_endboss.class.js"></script>
+    <script src="classes/world.class.js"></script>
+    <script src="classes/background-object.class.js"></script>
+    <script src="classes/coins.class.js"></script>
+    <script src="classes/bottles.class.js"></script>
+    <script src="classes/keyboard.class.js"></script>
+    <script src="classes/level.class.js"></script>
+    <script src="classes/endboss.class.js"></script>
+    <script src="js/levels/level1.js"></script>
+    <script src="js/game.js"></script>
+
+</head>
+
+<body>
+    <section>
+        <div class="overlay d-none" id="overlay">
+            <p>Please rotate your mobilephone</p>
+            <img class="icon-overlay" id="imgOverlay" src="img/icons/phone.png" />
+        </div>
+
+        <div id="sectionStartscreen" class="div-startscreen">
+            <img class="screen-size" id="imgStartScreen" src="img/startScreen2.png">
+            <div id="btns-container" class="btns-container">
+                <button id="btnStart" class="btns-start" onclick="gameStart()">Game Start</button>
+                <button id="btnRules" class="btns-start" onclick="openDialogRules()">How Can I Play?</button>
+            </div>
+            <div id="links-container" class="links-container">
+                <a class="a-link" href="template/privacy_policy.html">Privacy Policy</a>
+                <a class="a-link" href="template/legal_notice.html">Legal Notice</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sectionGame" class="d-none">
+        <h1 id="gameTitle" class="gameTitle">Zombie Island</h1>
+        <div id="game" class="fullscreen">
+            <canvas id="canvas" width="720px" height="480px"> </canvas>
+            <div id="btnControls" class="mobile-controls d-none">
+                <div>
+                    <button class="btn-control" id="btnMoveLeft"><img class="icon"
+                            src="img/icons/arrow-left.png"></button>
+                    <button class="btn-control" id="btnMoveRight"><img class="icon"
+                            src="img/icons/arrow-right.png"></button>
+                </div>
+                <div>
+                    <button class="btn-control" id="btnJump">
+                        <img class="icon" src="img/icons/jump.png"></button>
+                    <button class="btn-control" id="btnThrow">
+                        <img class="icon" src="img/6_rum_bottle/bottle.png"></button>
+                </div>
+            </div>
+
+            <div id="btnsSoundFullscreen" class="sound-screen-controls">
+                <button class="btn-control" id="btnFullscreen" onclick="enterFullscreen()">
+                    <img class="icon" src="img/icons/full-screen.png"></button>
+                <button class="btn-control d-none" onclick="fullscreenOff()" id="btnFullscreenOff">
+                    <img class="icon" src="img/icons/back-screen.png"></button>
+
+                <button class="btn-control" id="btnSpeaker" onclick="soundOff()">
+                    <img class="icon" src="img/icons/speaker.png"></button>
+
+                <button class="btn-control d-none" id="btnSpeakerOff" onclick="soundOn()">
+                    <img class="icon" src="img/icons/sound-deactivated.png"></button>
+            </div>
+        </div>
+
+        <audio id="gameSound" src="audio/jungle_music.mp3" loop> </audio>
+    </section>
+
+    <section>
+        <div id="sectionEndscreen" class="div-startscreen d-none">
+            <img class="screen-size d-none" id="imgEndLostScreen" src="img/you_lost.png">
+            <img class="screen-size d-none" id="imgEndWinScreen" src="img/you_win.png">
+            <img class="screen-size d-none" id="imgEndGameOverScreen" src="img/game_over.png">
+            <div id="btns-container" class="btns-container">
+                <button id="btnPlayAgain" class="btns-start" onclick="gameStart()">Play Again</button>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="dialogRules" class="dialogo-bg d-none">
+        <div class="dialog">
+            <span onclick="closeDialog()" class="close">X</span>
+            <h4 class="dialog-title">How Can I Play ?</h4>
+            <div class="move-description">
+                <div class="icon-line" style="width: 60%;">
+                    <span><img class="icon" src="img/icons/arrow-right.png">&nbsp;&nbsp;/&nbsp;&nbsp; F</span>
+                    <span><img class="icon" src="img/icons/arrow-left.png">&nbsp;&nbsp;/&nbsp;&nbsp; A</span>
+                    <span><img class="icon" src="img/icons/arrow-down.png">&nbsp;&nbsp;/&nbsp;&nbsp; T</span>
+                    <span><img class="icon" src="img/icons/arrow-up.png">&nbsp;&nbsp;/&nbsp;&nbsp; Space</span>
+                </div>
+                <div class="icon-line" style="width: 40%;">
+                    <p>Move Right</p>
+                    <p>Move Left</p>
+                    <p>Throw</p>
+                    <p>Jump</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

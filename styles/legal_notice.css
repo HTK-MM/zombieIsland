@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'Creepster-Regular';
+  src: url('../fonts/creepster-Regular.ttf')format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Creepster-Regular', Arial, Helvetica, sans-serif;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('../img/background_legal.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.legal-notice {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: #17361c;
+  padding-left: 20px;
+}
+
+.back {
+  display: flex;
+  width: max-content;
+  height: 50px;
+  border-radius: 10px;
+  border: #56b409 solid 2px;
+  color: #084717;
+  background-color: #9ef756;
+  cursor: pointer; 
+  font-size: x-large;
+  box-shadow: 2px 3px 5px rgba(35, 0, 0, 2);
+  align-items: center;
+  padding: 15px;
+}
+
+h1 {
+  display: flex;
+  font-size: 46px;
+  color: #009622;
+  text-shadow: 4px 2px 4px rgba(130, 0, 0, 2);
+}
+
+h2 {
+
+  display: flex;
+}
+
+p {
+  display: flex;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #092379;
+}
+
+a:hover {
+  scale: 1.2;
+}
